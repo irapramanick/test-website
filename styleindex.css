@@ -1,0 +1,25 @@
+div {
+	border:2px solid #8A2BE2;
+}
+
+#top-bar {
+	background-color:#B0E0E6;
+	font-family:Georgia;
+	font-size:4px;
+	font-color:#778899;
+}
+
+#center {
+	background-color:#F0F8FF;
+	font:Georgia;
+	font-size:4px;
+	font-color:#778899;
+}
+
+#side-1 {
+	background-color:#AFEEEE;
+}
+
+#side-2 {
+	background-color:#AFEEEE;
+}
