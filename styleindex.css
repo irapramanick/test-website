@@ -1,25 +1,22 @@
-div {
-	border:2px solid #8A2BE2;
+img {
+    display: block;
+    margin: 0 auto;
+}
+button {
+    display: block;
+    margin: 0 auto;
+}
+input {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    font-size: 20px;
 }
 
-#top-bar {
-	background-color:#B0E0E6;
-	font-family:Georgia;
-	font-size:4px;
-	font-color:#778899;
+div.top-bar {
+    padding-top:20px;
 }
 
-#center {
-	background-color:#F0F8FF;
-	font:Georgia;
-	font-size:4px;
-	font-color:#778899;
-}
-
-#side-1 {
-	background-color:#AFEEEE;
-}
-
-#side-2 {
-	background-color:#AFEEEE;
+div.center {
+    padding:10px;
 }
