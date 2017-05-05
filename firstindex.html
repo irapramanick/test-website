@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Play Now! 
+</title>
+<link rel="stylesheet" type="text/css" href="/Users/alinegs17/Desktop/text.css">
+<style type="text/css">
+img {
+    display: block;
+    margin: 0 auto;
+}
+button {
+    display: block;
+    margin: 0 auto;
+}
+input {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    font-size: 20px;
+}
+
+div.top-bar {
+    padding-top:20px;
+}
+
+div.center {
+    padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar" style="background-color: pink; height: 200px; width:100%; position:relative; ">
+
+<button onclick="guessMyNumber()" style="font-family:Garamond; font-size: 40px; background-color: purple; color: white; padding:10px 20px; height:55; width:85;" >Guess the Number</button>
+
+<p id="intro" style="color: white; text-align: center; font-size: 34px;"></p>
+
+<input type="text" name="txt" id="numberGuess" onchange="getUserGuess()">
+
+<script>
+
+var number_to_guess = -1;
+var num_guesses = -1;
+var num_games = 0;
+var total_score = 0;
+
+function guessMyNumber() {
+    /* Start the game. Reset the number to guess and number of guesses. */
+    document.getElementById("output").innerHTML = "Guess my number between 0-99";
+    number_to_guess = Math.floor(Math.random() * 100);
+    window.alert(number_to_guess); /* for debugging */
+    num_guesses = 0;
+    num_games += 1;
+}
+
+function getUserGuess() {
+    var user_guess = document.getElementById("numberGuess").value;
+    if (user_guess === null) {
+        document.getElementById("output").innerHTML = "You entered nothing, please enter a guess!";
+    }
+    else { 
+        /* User guessed a number. */
+        num_guesses += 1;
+        if (user_guess > number_to_guess) {
+            document.getElementById("output").innerHTML = "Guess lower than " + user_guess;
+        }
+        else if (user_guess < number_to_guess) {
+            document.getElementById("output").innerHTML = "Guess higher than " + user_guess;
+        }
+        else {
+            /* user_guess is equal to number_to_guess */
+            total_score += num_guesses;
+            var average_score = total_score/num_games;
+            document.getElementById("output").innerHTML = "Congrats you guessed the number " + number_to_guess + " in " + num_guesses + " attempts!" + "Your average score in " + num_games + " games = " + average_score;
+        }
+    } 
+}
+
+</script>
+</div>
+
+<div class="center" style="background-color: purple; width=100%">
+<p id="output" style="background-color:purple; color: white; text-align: center; font-size: 34px;">
+output area
+</p>
+</div>
+
+<div style="width: 100%; overflow: hidden; background-color: pink;">
+    <div class="side-1" style="background-color: pink; float: left; width: 300px;">
+    <center><img src="https://s-media-cache-ak0.pinimg.com/736x/86/d6/41/86d641fd767e458386a68bdbda187c0a.jpg" width="300px" height="400px"></img></center>
+    </div>
+
+    <div class="side-2" style="background-color: pink; float: right; width: 300px;"> 
+    <center><img src="https://s-media-cache-ak0.pinimg.com/736x/86/d6/41/86d641fd767e458386a68bdbda187c0a.jpg" width="300px" height="400px"></img></center>
+    </div>
+</div>
+
+</body>
+</html>
