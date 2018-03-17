@@ -37,7 +37,7 @@
         /* Create game area */
         myGameArea.start();
         /* Create the bar */
-        myGamePanel = new component(50, 10, "#AE62AE", 150, 250);
+        myGamePanel = new component(75, 15, "#AE62AE", 150, 250);
         myScoreBoard = new component("30px", "Consolas", "Black", 320, 40, "text");
     }
     
@@ -149,7 +149,7 @@
                 return;
             }
          }
-         // If game panel catches any catch then increment the score 
+         // If game panel catches any green blocks then increment the score 
          for(i = 0; i < myCatches.length; i += 1 ) {
             if (myGamePanel.pointMade(myCatches[i])) {
                 myScore += 1;
@@ -173,10 +173,10 @@
             var x = (Math.random() * (maxX - minX)) + minX;
             var y = 0;
             if (createCatch) {
-                myCatches.push(new component(30, 30, "#00FF00", x, y));
+                myCatches.push(new component(20, 20, "#00FF00", x, y));
             }
             else {
-                myObstacles.push(new component(30, 30, "#FFAA41", x, y));
+                myObstacles.push(new component(25, 25, "#FFAA41", x, y));
             }
             // Randomly change the value of createCatch
             if (Math.random() >= 0.5) {
