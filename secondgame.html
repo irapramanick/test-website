@@ -148,7 +148,7 @@
         for(i = 0; i < myObstacles.length; i += 1 ) {
             if (myGamePanel.crashWith(myObstacles[i])) {
                 numLives -= 1;
-                if (numLives <= 0) {
+                if (numLives == 0) {
                     myGameArea.stop();
                     return;
                 }
