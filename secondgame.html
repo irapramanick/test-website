@@ -32,6 +32,7 @@
     var myScoreBoard;
     var createCatch = true;
     var myScore = 0;
+    var numLives = 1;
     
     function startGame() {
         /* Create game area */
@@ -143,10 +144,14 @@
     
     function updateGameArea() {
         // If the game panel crashes with any obstacle square, stop the game
+        // if there aren't any lives left.
         for(i = 0; i < myObstacles.length; i += 1 ) {
             if (myGamePanel.crashWith(myObstacles[i])) {
-                myGameArea.stop();
-                return;
+                numLives -= 1;
+                if (numLives <= 0) {
+                    myGameArea.stop();
+                    return;
+                }
             }
          }
          // If game panel catches any green blocks then increment the score 
