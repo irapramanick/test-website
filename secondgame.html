@@ -32,7 +32,7 @@
     var myScoreBoard;
     var createCatch = true;
     var myScore = 0;
-    var numLives = 2;
+    var numLives = 0;
     
     function startGame() {
         /* Create game area */
@@ -110,10 +110,6 @@
             var otherUp = otherComponent.y;
             var otherDown = otherComponent.y + otherComponent.height;
             var crash = true;
-            if (numLives > 0) {
-                numLives -= 1;
-                crash = false;
-            }
             if (myLeft > otherRight || myRight < otherLeft || myUp > otherDown || myDown < otherUp) {
                 crash = false; 
             } else {
