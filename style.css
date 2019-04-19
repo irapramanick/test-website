@@ -1,0 +1,63 @@
+# CSS-style
+
+div.fixed {
+  position: fixed;
+  top: 40;
+  right: 20;
+}
+
+
+h2.Geometric {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-shadow: 3px 2px green;
+  border-style: double;
+  margin: 0 0 50px 0;
+  width: 500px;
+  margin: left;
+  border: 3px solid
+  max-width: 150px;
+
+}
+
+h2.pool {
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  border-style: double;
+  margin: 0 0 50px 0;
+  margin: left;
+  width: 40%
+  border: 3px solid
+ 
+}
+
+h2.lightblue {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-shadow: 3px 2px green;
+  border-style: double;
+  margin: 0 0 50px 0;
+  width: 500px;
+  margin: left;
+  border: 3px solid
+}
+
+h2.triangle {
+  color: yellow;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-shadow: 3px 2px green;
+  border-style: double;
+  margin: 0 0 50px 0;
+  width: 500px;
+  margin: left;
+  border: 3px solid
+}
+
+img.firsthouse {
+  top: 20px
+  right: 40px
+}
